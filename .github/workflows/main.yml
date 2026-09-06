@@ -1,4 +1,4 @@
-name: Build APK GoLockers
+name: Build APK Clean Reset
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-android:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Checkout kode aplikasi
@@ -18,14 +18,14 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install Komponen Sistem Linux
+      - name: Install Komponen Linux
         run: |
           sudo apt-get update
           sudo apt-get install -y build-essential git openjdk-17-jdk unzip zip autoconf automake libtool pkg-config libffi-dev
           python -m pip install --upgrade pip setuptools wheel
-          pip install buildozer cython==0.29.36 virtualenv
+          pip install buildozer cython==0.29.33 virtualenv
 
-      - name: Mulai Perakitan APK (Buildozer)
+      - name: Mulai Perakitan APK
         run: |
           yes | buildozer -v android debug
 
