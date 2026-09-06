@@ -1,0 +1,26 @@
+name: Build APK GoLockers
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-android:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout kode aplikasi
+        uses: actions/checkout@v4
+
+      - name: Jalankan Buildozer
+        uses: ArtemSBulgakov/buildozer-action@v1
+        id: buildozer
+        with:
+          command: buildozer android debug
+          buildozer_version: master
+
+      - name: Upload hasil APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: GoLockers-APK
+          path: bin/*.apk
