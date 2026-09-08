@@ -34,6 +34,9 @@ android.archs = arm64-v8a, armeabi-v7a
 
 android.allow_backup = True
 
+# Python version (PENTING: Tentukan versi Python)
+python.version = 3.11
+
 
 [buildozer]
 
