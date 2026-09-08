@@ -9,8 +9,8 @@ source.include_exts = py,png,jpg,jpeg,kv,atlas
 
 version = 1.0
 
-# Gunakan Kivy 2.1.0 (paling stabil untuk Android)
-requirements = python3,kivy==2.0.0
+# Gunakan Kivy 2.3.0 (versi terbaru yang stabil)
+requirements = python3,kivy==2.3.0
 
 orientation = portrait
 
@@ -35,7 +35,7 @@ android.archs = arm64-v8a, armeabi-v7a
 
 android.allow_backup = True
 
-# Python version - Gunakan 3.10
+# Python version
 python.version = 3.10
 
 
