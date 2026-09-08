@@ -25,7 +25,7 @@ android.minapi = 24
 android.build_tools_version = 33.0.2
 
 # NDK
-android.ndk = 25b
+android.ndk = 24.0.8215888
 
 # License Agreement
 android.accept_sdk_license = True
